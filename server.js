@@ -1,6 +1,6 @@
 const express = require("express");
 const cors = require("cors");
-const cafeRoutes = require("./src/routes/cafeRouter.js");
+const pedidosRoutes = require("./src/routes/pedidoRouter.js");
 
 const app = express();
 const PORT = 2080;
@@ -8,7 +8,7 @@ const PORT = 2080;
 app.use(cors());
 app.use(express.json());
 
-app.use ("/api", cafeRoutes);
+app.use ("/api", pedidosRoutes);
 
 app.get("/", (req, res) => {
     res.send("EUUUU AMOOOO BACKEND <3");
