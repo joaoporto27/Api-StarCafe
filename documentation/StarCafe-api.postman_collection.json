@@ -1,0 +1,113 @@
+{
+	"info": {
+		"_postman_id": "2cba43ce-00ca-4120-898e-706ccf047e2e",
+		"name": "StarCafe-api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37231902"
+	},
+	"item": [
+		{
+			"name": "getAll",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:2080/api/menu",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2080",
+					"path": [
+						"api",
+						"menu"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"produto\": \"Café Expresso\",\r\n    \"preco\": 13.99,\r\n    \"status\": \"pronto\"\r\n    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:2080/api/order",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2080",
+					"path": [
+						"api",
+						"order"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:2080/api/order/c4c95f8b-9f29-44c3-b607-0929c308caee",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2080",
+					"path": [
+						"api",
+						"order",
+						"c4c95f8b-9f29-44c3-b607-0929c308caee"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getById",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:2080/api/order/b548a4ca-c103-4eff-9709-481c8511924d",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2080",
+					"path": [
+						"api",
+						"order",
+						"b548a4ca-c103-4eff-9709-481c8511924d"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

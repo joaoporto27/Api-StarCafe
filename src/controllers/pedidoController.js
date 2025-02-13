@@ -42,18 +42,19 @@ const router = {
 
     deletePedido: (req, res) => {
         try {
-            const { id } = req.params;
-            const pedido = pedido.getPedidosById(id);
+            const id = req.params.id;
+            const pedido = lista.getPedidosById(id); 
             if (!pedido) {
                 return res.status(404).json({ message: "Pedido não encontrado" });
             }
-            if (pedido.status !== "Pendente" || pedido.status !== "Pronto") {
+            if (pedido.status !== "Pendente" && pedido.status !== "Pronto") {
                 return res.status(403).json({ message: "Não é possível deletar um pedido que já está em preparo ou pronto" });
             }
+            console.log(pedido);
             lista.deletePedido(id);
             return res.status(200).json({ message: "Pedido cancelado com sucesso" });
         } catch (error) {
-            return res.status(400).json({ message: "Erro ao cancelar pedido", error });
+            return res.status(400).json({ message: "Erro ao cancelar pedido", error }); 
         }
     }
 }
